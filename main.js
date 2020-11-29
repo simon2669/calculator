@@ -6,12 +6,12 @@ const inputPont = document.querySelectorAll('.inputPont');
 const inputDelete = document.querySelectorAll('.deleteInput');
 const egyenlőség = document.querySelectorAll('.egyenlőség');
 const output = document.querySelector('.calculator__output');
-let megoldas;
+
 let mJelek;
 let arrOutput = [];
 let műveletiJelek = [];
 let számok = [];
-
+let összeg = 0;
 let utolso = 0;
 let voltMűveletiJel = false;
 
@@ -29,17 +29,49 @@ function mindig() {
 
 (function () {
   egyenlőség.forEach((item) => item.addEventListener('click', () => {
-
+    let megoldas;
+    let nulla = 0;
+    let placeholder;
+    let csakSzámokInt = csakSzámok.map((item) => parseInt(item));
     //console.log(műveletiJelek, csakSzámok)
-    let c = csakSzámok.map((item) => parseInt(item))
-    console.log(c)
-    let f = műveletiJelek.forEach((itemm) => c.reduce((pre, m) => aa(pre, m, itemm)));
-    console.log(f)
+    // let c = csakSzámok.map((item) => parseInt(item))
+    // console.log(c)
+    // let f = műveletiJelek.forEach((itemm) => c.reduce((pre, m) => aa(pre, m, itemm)));
+    // console.log(f)
 
 
+    for (let i = 0; i < műveletiJelek.length; i++) {
+      //console.log(műveletiJelek[i]);
 
-  }
-  ))
+      if (műveletiJelek[i] == '+') {
+        megoldas = csakSzámokInt[i] + csakSzámokInt[i + 1]
+
+        csakSzámokInt[i + 1] = megoldas;
+        //console.log(megoldas)
+
+      }
+      else if (műveletiJelek[i] == '-') {
+        megoldas = csakSzámokInt[i] - csakSzámokInt[i + 1]
+
+        csakSzámokInt[i + 1] = megoldas;
+        //console.log(megoldas)
+      }
+      else if (műveletiJelek[i] == '*') {
+        megoldas = csakSzámokInt[i] * csakSzámokInt[i + 1]
+
+        csakSzámokInt[i + 1] = megoldas;
+        //console.log(megoldas)
+      }
+      else if (műveletiJelek[i] == '/') {
+        megoldas = csakSzámokInt[i] / csakSzámokInt[i + 1]
+
+        csakSzámokInt[i + 1] = megoldas;
+        //console.log(megoldas)
+      }
+    }
+    output.textContent = megoldas;
+  })
+  )
 })();
 
 function összeadás(a, b) {
@@ -154,7 +186,6 @@ function következőMűveletiJel(x, y, jel) {
     utolso = 0;
   }))
 })();
-
 
 
 
