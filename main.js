@@ -33,8 +33,8 @@ function mindig() {
     //console.log(műveletiJelek, csakSzámok)
     let c = csakSzámok.map((item) => parseInt(item))
     console.log(c)
-    let fasza = műveletiJelek.forEach((itemm) => c.reduce((pre, m) => aa(pre, m, itemm)));
-    console.log(fasza)
+    let f = műveletiJelek.forEach((itemm) => c.reduce((pre, m) => aa(pre, m, itemm)));
+    console.log(f)
 
 
 
@@ -155,23 +155,6 @@ function következőMűveletiJel(x, y, jel) {
   }))
 })();
 
-// let peti = [];
-// if (peti[0] == undefined) {
-//   peti[0] = '';
-//   peti[1] = '';
-// }
-// console.log(typeof peti[0])
-// console.log(peti[1])
 
-function összeadás(a, b) {
-  console.log(a + b);
-}
-function kivonás(a, b) {
-  return a - b;
-}
-function szorzás(a, b) {
-  return a * b;
-}
-function osztás(a, b) {
-  return a / b;
-}
+
+
