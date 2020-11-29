@@ -74,37 +74,37 @@ function mindig() {
   )
 })();
 
-function összeadás(a, b) {
-  return a + b;
-}
-function kivonás(a, b) {
-  return a - b;
-}
-function szorzás(a, b) {
-  return a * b;
-}
-function osztás(a, b) {
-  return a / b;
-}
-function aa(a, b, jel) {
-  if (jel == '+') {
-    összeadás(a, b);
-  }
-  else if (jel == '-') {
-    kivonás(a, b)
-  }
-  else if (jel == '*') {
-    szorzás(a, b)
-  }
-  else if (jel == '/') {
-    osztás(a, b)
-  }
-}
-function következőMűveletiJel(x, y, jel) {
-  if (jel == '+') {
-    összeadás(x, y)
-  }
-}
+// function összeadás(a, b) {
+//   return a + b;
+// }
+// function kivonás(a, b) {
+//   return a - b;
+// }
+// function szorzás(a, b) {
+//   return a * b;
+// }
+// function osztás(a, b) {
+//   return a / b;
+// }
+// function aa(a, b, jel) {
+//   if (jel == '+') {
+//     összeadás(a, b);
+//   }
+//   else if (jel == '-') {
+//     kivonás(a, b)
+//   }
+//   else if (jel == '*') {
+//     szorzás(a, b)
+//   }
+//   else if (jel == '/') {
+//     osztás(a, b)
+//   }
+// }
+// function következőMűveletiJel(x, y, jel) {
+//   if (jel == '+') {
+//     összeadás(x, y)
+//   }
+// }
 (function () {
   inputNumbers.forEach((item) => item.addEventListener('click', () => {
     arrOutput.push(item.textContent)
