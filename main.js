@@ -6,7 +6,7 @@ const inputPont = document.querySelectorAll('.inputPont');
 const inputDelete = document.querySelectorAll('.deleteInput');
 const egyenlőség = document.querySelectorAll('.egyenlőség');
 const output = document.querySelector('.calculator__output');
-
+let megoldas;
 let mJelek;
 let arrOutput = [];
 let műveletiJelek = [];
@@ -29,10 +29,10 @@ function mindig() {
 
 (function () {
   egyenlőség.forEach((item) => item.addEventListener('click', () => {
-    let megoldas;
+
     let nulla = 0;
     let placeholder;
-    let csakSzámokInt = csakSzámok.map((item) => parseInt(item));
+    let csakSzámokInt = csakSzámok.map((item) => parseFloat(item));
     //console.log(műveletiJelek, csakSzámok)
     // let c = csakSzámok.map((item) => parseInt(item))
     // console.log(c)
@@ -175,6 +175,7 @@ function következőMűveletiJel(x, y, jel) {
 
 (function () {
   inputDelete.forEach((item) => item.addEventListener('click', () => {
+    megoldas = 0;
     megoldas = [];
     mJelek = [];
     arrOutput = [];
